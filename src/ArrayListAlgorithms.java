@@ -1,7 +1,10 @@
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Enumeration;
 
-public class ArrayListAlgorithms {
+public class
+ArrayListAlgorithms {
     /** Returns true if any of the elements in stringList contain
      *  target as a substring; false otherwise.
      *
@@ -192,10 +195,25 @@ public class ArrayListAlgorithms {
      */
     public static ArrayList<String> parseWordsAndReverse(String sentence)
     {
-        ArrayList<String> result = new ArrayList<>();
-        StringBuilder sentenceTemp = new StringBuilder(sentence);
-        sentenceTemp.reverse();
-        
+        String[] resultTemp = sentence.toString().split(" ");
+        ArrayList<String> result = new ArrayList<>(Arrays.asList(resultTemp));
+        Collections.reverse(result);
         return result;
     }
+    /** Removes all words from wordList that begin with "b" and inserts them at the
+     *  front of wordList; all "b" words that are moved should appear in the same order
+     *  in the modified arrayList as they did before being moved
+     *
+     *  For example, this method will take a wordList:
+     *  ["apple", "banana", "cherry", "donut", "bagel", "danish", "berry", "baguette", "soda"]
+     *  and modify it to
+     *  ["banana", "bagel", "berry", "baguette", "apple", "cherry", "donut", "danish", "soda"]
+     *
+     *  DOES mutate (modify) elements in wordList
+     *  PRECONDITIONS: wordList.size() > 0, all strings in wordList have at least one character
+     *
+     *  @param wordList  arraylist of words
+     */
+    public static void moveBWords(ArrayList<String> wordList)
+    { /* implement this method! */ }
 }

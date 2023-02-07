@@ -5,8 +5,16 @@ public class ArrayListAlgorithmTester
 {
     public static void main(String[] args)
     {
-        ArrayList<String> stringList7 = new ArrayList<String>(Arrays.asList("hello", "my", "best", "friend"));
-        ArrayListAlgorithms.duplicateUpperEnd(stringList7);
-        System.out.println(stringList7);
+        String mySentence = "This is my sentence!";
+        ArrayList<String> reversedWords = ArrayListAlgorithms.parseWordsAndReverse(mySentence);
+        System.out.println(reversedWords);
+
+        String mySentence2 = "It is a lovely day outside today don't you think?";
+        ArrayList<String> reversedWords2 = ArrayListAlgorithms.parseWordsAndReverse(mySentence2);
+        System.out.println(reversedWords2);
+
+        String mySentence3 = "Hello";
+        ArrayList<String> reversedWords3 = ArrayListAlgorithms.parseWordsAndReverse(mySentence3);
+        System.out.println(reversedWords3);
     }
 }
