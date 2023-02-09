@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Enumeration;
+
 
 public class
 ArrayListAlgorithms {
@@ -247,6 +247,10 @@ ArrayListAlgorithms {
      */
     public static ArrayList<Integer> modes(int[] numList)
     {
+        ArrayList<Integer> temp = new ArrayList<>(Arrays.asList(numList));
+        ArrayList<Integer> timeThatEachElementAppears = new ArrayList<>();
+        int[] noDupes = removeDuplicates(new ArrayList<Integer>(Arrays.asList(numList)));
+
 
     }
 }
